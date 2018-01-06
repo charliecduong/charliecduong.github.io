@@ -1,0 +1,240 @@
+/*#main a:hover {
+  border: 1px solid #242424;
+  background-color: #242424;
+  color: #fff;
+
+}*/
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.location {
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  top: 25px;
+}
+
+#particles {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#main {
+  position: relative;
+  display: block;
+  width: 100%;
+  -webkit-animation: fadeinup 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadeinup 3s; /* Firefox < 16 */
+      -ms-animation: fadeinup 3s; /* Internet Explorer */
+       -o-animation: fadeinup 3s; /* Opera < 12.1 */
+          animation: fadeinup 3s;
+
+}
+
+#header {
+  position: fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: 1;
+  .wrap {
+    text-align: center;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-text;
+  }
+  a {
+    color: $color-text;
+    font-weight: 700;
+   &:hover {
+     color: $color-link;
+   }
+  }
+  .left {
+    text-align:left;
+    float: left;
+  }
+  .center {
+    text-align:left;
+    margin: 0 auto !important;
+    display:inline-block;
+  }
+  .right {
+    float: right;
+  }
+}
+
+#hero {
+  padding: 150px 0 300px;
+  h1 {
+    font-size: 6.5em;
+    line-height: 1;
+    margin: 0;
+    text-transform: none;
+    &.design {
+      color: $color-link;
+      font-style: italic;
+      text-transform: uppercase;
+      span {
+        display: inline-block;
+        border-bottom: 4px $color-link solid;
+      }
+    }
+  }
+}
+
+.section {
+  display: inline-block;
+  padding: 0 0 250px 0;
+  width: 100%;
+  .content {
+    width: 60%;
+    border-bottom: 4px $color-grey solid;
+    margin-bottom: 50px;
+  }
+  &#about {
+    .content {
+      width: 65%;
+      float: right;
+    }
+  }
+  &#work {
+    .content {
+      width: 65%;
+      margin: 0 auto;
+      border-bottom: none;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+      li {
+        list-style: none;
+        border-bottom: 4px $color-grey solid;
+        margin-bottom: 50px;
+        h3 {
+          font-family: $font-headline;
+          text-transform: uppercase;
+          letter-spacing: none;
+          margin: 0;
+          a {
+            border-bottom: none;
+            &:hover {
+              color: $color-text;
+            }
+          }
+        }
+        .subtitle {
+          font-size: 12px;
+          font-style: italic;
+          color: $color-text;
+          margin: 0;
+        }
+      }
+    }
+  }
+  &#contact {
+    padding: 0 0 100px 0;
+    .content {
+      width: 50%;
+    }
+    /*#social {
+      position: relative;
+      text-align: center;
+      padding: 10px 0;
+      a {
+        font-size: 24px;
+        &:hover {
+          //color: #fff;
+        }
+      }
+    }*/
+  }
+}
+
+.design {
+  //font-style: italic;
+}
+
+.code {
+  cursor: crosshair;
+}
+
+#contact h2:last-child {
+  text-align: center;
+}
+
+#footer {
+  font-size: 10px;
+  text-align: center;
+  display: block;
+  -webkit-animation: fadeinup 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadeinup 3s; /* Firefox < 16 */
+      -ms-animation: fadeinup 3s; /* Internet Explorer */
+       -o-animation: fadeinup 3s; /* Opera < 12.1 */
+          animation: fadeinup 3s;
+}
+@media screen and (max-width: $page-breakpoint) {
+  .wrap {
+    margin: 0 15px;
+  }
+  #hero {
+    h1 {
+      font-size: 5em;
+    }
+  }
+}
+@media screen and (max-width: $mobile-breakpoint) {
+  #header {
+    p {
+      margin: 1em 0;
+    }
+  }
+  #hero {
+    position: relative;
+    padding: 150px 0;
+    h1 {
+      font-size: 3em;
+    }
+  }
+  .section {
+    padding: 0 0 100px 0;
+    &#about,
+    &#work,
+    &#contact {
+      .content {
+        width: 100%;
+        float: none;
+      }
+    }
+    .content {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  #hero {
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  #header {
+    .center {
+      display: none;
+    }
+  }
+  #hero {
+    h1 {
+      font-size: 1.7em;
+    }
+  }
+}

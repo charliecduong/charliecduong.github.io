@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.6;
+  color: $color-text;
+  background: $color-background; //#f6f5f0;
+  font-family: $font-sans-serif;
+}
+
+body {
+}
+
+* {
+  //background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  border: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-headline;
+  line-height: 1.25;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+a {
+  /*#F9F9EF*/
+  text-decoration: none;
+  color: $color-link;
+  font-weight: 700;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  &:hover {
+    color: $color-text;
+    //border-bottom: 2px $color-link solid;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  html, body {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  p {
+    margin: 0 0 1em 0;
+  }
+}
+@media screen and (max-width: 320px) {
+
+}
