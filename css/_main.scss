@@ -192,6 +192,9 @@
   }
 }
 @media screen and (max-width: $mobile-breakpoint) {
+  #particles {
+    display: none;
+  }
   #header {
     p {
       margin: 1em 0;
