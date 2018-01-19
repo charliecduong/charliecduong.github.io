@@ -1,0 +1,973 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Grid + Colors
+   ========================================================================== */
+   
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.eot');
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.woff') format('woff'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuebook';
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.eot');
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.woff') format('woff'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.ttf') format('truetype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.svg#bebas_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuelight';
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.eot');
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.woff') format('woff'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.ttf') format('truetype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neue_regular';
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.eot');
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.woff') format('woff'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuethin';
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.eot');
+    src: url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.woff') format('woff'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.ttf') format('truetype'),
+         url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.svg#bebas_neuethin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@col: 300px;
+@gut: 30px;
+@full: 3*@col + 2*@gut;
+
+@open: 'Open Sans', sans-serif;
+@bebas: 'bebas_neue_regular';
+@bebaslight: 'bebas_neuelight';
+@bebasbook: 'bebas_neuebook';
+
+@pink: #f22688;
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	color: white;
+	font-size: 36px;
+	font-family: @open;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: white;
+	font-size: 30px;
+	font-family: @open;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: white;
+	font-size: 18px;
+	font-family: @open;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h4 {
+	color: white;
+	font-size: 18px;
+	font-family: @open;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+small {
+	font-family: @open;
+	font-weight: 100;
+	font-size: 10px;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+
+
+#sizzle_reel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 5000;
+	display: none;
+	padding: 0 15%;
+	
+	iframe {
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+nav {
+	position: fixed;
+	top: 20%;
+	left: 0;
+	z-index: 4000;
+	padding: 15px;
+	background: rgba(0,0,0,0.35);
+	
+	ul {
+		padding: 0;
+	
+		li {
+			width: 120px;
+			font-family: @bebasbook;
+			letter-spacing: 2px;
+			font-size: 13px;
+			list-style-type: none;
+			padding: 5px;
+			color: white;
+			background: #42b3d1;
+			margin-bottom: 13px;
+			padding-left: 10px;
+			cursor: pointer;
+			
+		}
+	}
+}
+
+#hero {
+	width: 100%;
+	height: 650px;
+	background: url(http://dctobc.com/trillectro/img/hero_clean.jpg) no-repeat center center; ;
+	background-size: cover;
+	padding-top: 200px;
+	
+	h1 {
+		text-align: center;
+	}
+	
+	#buy_now {
+		padding: 13px;
+		width: 200px;
+		font-size: 36px;
+		color: white;
+		background: @pink;
+		margin: 0 auto;
+		font-family: @bebasbook;
+		text-align: center;
+		margin-bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#info {
+		width: 400px;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+		font-family: @bebasbook;
+		font-size: 30px;
+		margin-bottom: 40px;
+		text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+	}
+	
+	#countdown {
+		width: @full;
+		margin: 0 auto 80px;
+		color: white;
+		z-index: 1000;
+		padding: 40px 0 60px;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		
+		div {
+			float: left;
+			width: 25%;
+			text-align: center;
+			position: relative;
+		}
+		
+		span {
+			font-size: 160px;
+			font-family: @bebas;
+			text-align: center;
+		}
+		
+		.text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			font-family: @bebasbook;
+			font-weight: 100;
+			font-size: 24px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+		}
+	}
+	
+	#signup {
+		width: 400px;
+		margin: 0 auto 20px;
+	
+		form {
+			h1 {
+				text-align: center;
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+			
+			ul {
+				padding: 0;
+				margin: 0;
+			}
+			
+			li {
+				list-style-type: none;
+			}
+			
+			.wf-email {
+				float: left;
+			}
+			
+			.wf-submit {
+				float: right;
+			}
+			
+			input[type='email'] {
+				padding: 13px;
+				color: rgba(0,0,0,0.20);
+				text-transform: uppercase;
+				font-size: 20px;
+				letter-spacing: 2px;
+				font-family: @bebasbook;
+				width: 290px;
+				border: 0;
+			}
+			
+			input[type='submit'] {
+				width: 45px;
+				height: 48px;
+				padding: 13px;
+				background: @pink;
+				color: white;
+				border: 0;
+				margin-left: -5px;
+			}
+			
+			input[type='button'] {
+				background: #00aced;
+				width: 95px;
+				height: 48px;
+				float: right;
+				border: 0;
+				font-family: @bebasbook;
+				letter-spacing: 2px;
+				margin-left: -20px;
+				color: white;
+			}
+		}
+	}
+	
+	#share {
+		width: 440px;
+		margin: 5*@gut auto 0;
+		
+		ul {
+			padding: 0;
+			margin: 0;
+			overflow: visible !important;
+		}
+		
+		li {
+			padding: 10px;
+			width: 180px;
+			float: left;
+			display: block;
+			font-size: 20px;
+			text-align: center;
+			position: relative;
+			
+			&:first-child {
+				margin-right: 40px;
+			}
+		
+			a {
+				color: white;
+				text-decoration: none;
+				font-family: @bebasbook;
+				letter-spacing: 1px;
+			}
+			
+			span {
+				background: white;
+				color: rgba(0,0,0,0.45);
+				width: 180px;
+				padding: 10px;
+				position: absolute;
+				left: 0;
+				margin: 0;
+				top: -80px;
+				display: block !important;
+				
+				&:after {
+					top: 100%;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-color: rgba(136, 183, 213, 0);
+					border-top-color: white;
+					border-width: 20px;
+					margin-left: -20px;
+				}
+			}
+		}
+	
+		.facebook {
+			background: #4c66a4;
+			
+			.button {
+				iframe {
+					padding: 10px;
+					background: #4c66a4;
+				}
+			}
+		}
+		
+		.twitter {
+			background: #00aced;
+			
+			.button {
+				iframe {
+					padding: 10px;
+					background: #00aced;
+				}
+			}
+		}
+	}
+}
+
+#passes {
+	width: @full;
+	margin: 0 auto 100px;
+	padding-top: 480px;
+	
+	&.no-countdown {
+		padding-top: 120px;
+	}
+	
+	#reebok_100 {
+		width: 700px;
+		margin: 0 auto 60px;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	#vip_info {
+		color: white;
+		text-transform: uppercase;
+		font-family: @bebasbook;
+		padding-top: 60px;
+		clear: both;
+	
+		ul {
+			padding: 0;
+			
+			li {
+				list-style-type: none;
+				display: inline-block;
+				width: 49%;
+				font-size: 16px;
+				text-align: center;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	
+	#tickets_ga, #tickets_vip {
+		margin-bottom: 2*@gut;
+		
+		h3, h4 {
+			text-align: center;
+			margin: 0 0 10px 0;
+		}
+		
+		h4 {
+			margin-bottom: 1.5 * @gut;
+		}
+		
+		.ticket {
+			float: left;
+			width: @col - 40px;
+			margin-right: @gut;
+			background: rgba(255,255,255,0.80);
+			padding: 20px;
+			color: white;
+			position: relative;
+			
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 4000;
+			}
+			
+			h2 {
+				font-family: @bebaslight;
+				text-align: center;
+				font-size: 36px;
+			}
+			
+			.price {
+				font-family: @bebas;
+				text-align: center;
+				font-size: 60px;
+			}
+			
+			.fees {
+				font-family: @bebas;
+				font-size: 18px;
+				text-align: center;
+				margin-bottom: 20px;
+				
+				&:before {
+					content: "+";
+					font-size: 36px;
+					font-family: @bebas;
+					text-align: center;
+					display: block;
+				}
+			}
+			
+			small {
+				text-align: center;
+				display: block;
+			}
+			
+			&:before {
+				content: '';
+				border-radius: 50%;
+				width: 80px;
+				height: 80px;
+				background: black;
+				position: absolute;
+				top: -40px;
+				left: 50%;
+				margin-left: -40px;
+			}
+			
+			&.sale {
+				background: @pink;
+				
+				&:hover {
+					background: #d61170;
+				}
+			}
+			
+			&.last {
+				margin: 0;
+			}
+		}
+	}
+	
+	.fineprint {
+		color: white;
+		text-align: center;
+		
+		a {
+			color: @pink;
+			text-decoration: none;
+		}
+		
+		small {
+			font-size: 10px;
+		}
+		
+	}
+}
+
+#festival {
+	height: 525px;
+	background: url(http://dctobc.com/trillectro/img/festival.jpg) center center fixed no-repeat;
+	background-size: cover;
+	position: relative;
+	
+	.content {
+		width: @full;
+		margin: 0 auto;
+		padding: 100px 0 0;
+	}
+	
+	p {
+		font-family: @bebas;
+		font-size: 36px;
+		text-align: center;
+		color: white;
+	}
+	
+	#lastyear {
+		position: absolute;
+		bottom: 24px;
+		width: 100%;
+		color: white;
+		font-size: 30px;
+		text-align: center;
+		font-family: @bebasbook;
+	}
+}
+
+#video {
+	padding: 0 10%;
+	background: #222222;
+}
+
+#directions {
+	background: #551332;
+	background: -moz-linear-gradient(top,  #551332 0%, #771a47 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#551332), color-stop(100%,#771a47));
+	background: -webkit-linear-gradient(top,  #551332 0%,#771a47 100%);
+	background: -o-linear-gradient(top,  #551332 0%,#771a47 100%);
+	background: -ms-linear-gradient(top,  #551332 0%,#771a47 100%);
+	background: linear-gradient(to bottom,  #551332 0%,#771a47 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#551332', endColorstr='#771a47',GradientType=0 );
+	padding-bottom: 100px;
+
+	.content {
+		width: @full;
+		margin: 0 auto;
+		padding: 80px 0;
+	}
+	
+	h2 {
+		font-size: 36px;
+		text-align: center;
+		margin: 0 0 10px 0;
+		letter-spacing: 1px;
+		
+		&.secondary {
+			font-family: @open;
+			font-weight: 200;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+	}
+	
+	p {
+		text-align: center;
+		font-size: 18px;
+		color: white;
+		font-family: @open;
+		font-weight: 200;
+		margin-bottom: 30px;
+	}
+	
+	#map {
+		margin-bottom: 20px;
+	}
+	
+	#directions_info {
+		margin-bottom: 80px;
+	
+		div {
+			float: left;
+			width: @col;
+			margin-right: @gut;
+			text-align: center;
+			color: white;
+			font-family: @open;
+			font-weight: 100;
+			
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	
+	.partner {
+		float: left;
+		width: 80px;
+		padding: 44px;
+		opacity: .5;
+		position: relative;
+		margin: 50px @gut 100px 0;
+		
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		&:hover {
+			opacity: 1;
+		}
+		
+		&.fourth {
+			width: 40px;
+		}
+		
+		&.fifth {
+			width: 120px;
+			margin-right: 0;
+		}
+		
+		img {
+			width: 100%;
+			height: auto !important;
+			
+			&.karmaloop {
+				padding-top: 20px;
+			}
+			
+			&.reebok {
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+
+
+
+
+// Mobile
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+	#sizzle_reel {
+		display: none !important;
+	}
+	
+	nav {
+		display: none !important;
+	}
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
