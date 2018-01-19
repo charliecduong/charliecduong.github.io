@@ -1,0 +1,627 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Grid + Colors
+   ========================================================================== */
+@font-face {
+  font-family: 'bebas_neuebold';
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.eot');
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.woff') format('woff'), url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.ttf') format('truetype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bebas_neuebook';
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.eot');
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.woff') format('woff'), url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.ttf') format('truetype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_book-webfont.svg#bebas_neuebook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bebas_neuelight';
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.eot');
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.eot?#iefix') format('embedded-opentype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.woff') format('woff'), url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.ttf') format('truetype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_light-webfont.svg#bebas_neuelight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bebas_neue_regular';
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.eot');
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.woff') format('woff'), url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.ttf') format('truetype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bebas_neuethin';
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.eot');
+  src: url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.eot?#iefix') format('embedded-opentype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.woff') format('woff'), url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.ttf') format('truetype'), url('http://andnone.co/trillectro2014/css/type/bebasneue_thin-webfont.svg#bebas_neuethin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  color: white;
+  font-size: 50px;
+  font-family: 'bebas_neuebook';
+}
+h2 {
+  color: white;
+  font-size: 36px;
+  font-family: 'bebas_neuebook';
+}
+h3 {
+  color: white;
+  font-size: 24px;
+  font-family: 'bebas_neuebook';
+}
+h4 {
+  color: white;
+  font-size: 24px;
+  font-family: 'bebas_neuelight';
+}
+small {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 10px;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+#sizzle_reel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+#sizzle_reel iframe {
+  width: 90%;
+  margin: 0 auto;
+}
+#hero {
+  width: 100%;
+  height: 650px;
+  background: url(http://andnone.co/trillectro2014/img/hero.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top: 200px;
+}
+#hero h1 {
+  text-align: center;
+}
+#hero #info {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-family: 'bebas_neuebook';
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+#hero #countdown {
+  width: 960px;
+  margin: 0 auto 80px;
+  color: white;
+  z-index: 1000;
+  padding: 40px 0 60px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+#hero #countdown div {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+#hero #countdown span {
+  font-size: 160px;
+  font-family: 'bebas_neue_regular';
+  text-align: center;
+}
+#hero #countdown .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'bebas_neuebook';
+  font-weight: 100;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+#hero #signup {
+  width: 400px;
+  margin: 0 auto 20px;
+}
+#hero #signup form h1 {
+  text-align: center;
+}
+#hero #signup form ul {
+  padding: 0;
+  margin: 0;
+}
+#hero #signup form li {
+  list-style-type: none;
+}
+#hero #signup form .wf-email {
+  float: left;
+}
+#hero #signup form .wf-submit {
+  float: right;
+}
+#hero #signup form input[type='email'] {
+  padding: 13px;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'bebas_neuebook';
+  width: 290px;
+  border: 0;
+}
+#hero #signup form input[type='submit'] {
+  width: 45px;
+  height: 48px;
+  padding: 13px;
+  background: #f22688;
+  color: white;
+  border: 0;
+  margin-left: -5px;
+}
+#hero #signup form input[type='button'] {
+  background: #00aced;
+  width: 95px;
+  height: 48px;
+  float: right;
+  border: 0;
+  font-family: 'bebas_neuebook';
+  letter-spacing: 2px;
+  margin-left: -20px;
+  color: white;
+}
+#hero #share {
+  width: 440px;
+  margin: 150px auto 0;
+}
+#hero #share ul {
+  padding: 0;
+  margin: 0;
+  overflow: visible !important;
+}
+#hero #share li {
+  padding: 10px;
+  width: 180px;
+  float: left;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+#hero #share li:first-child {
+  margin-right: 40px;
+}
+#hero #share li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'bebas_neuebook';
+  letter-spacing: 1px;
+}
+#hero #share li span {
+  background: white;
+  color: rgba(0, 0, 0, 0.45);
+  width: 180px;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  top: -80px;
+  display: block !important;
+}
+#hero #share li span:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: white;
+  border-width: 20px;
+  margin-left: -20px;
+}
+#hero #share .facebook {
+  background: #4c66a4;
+}
+#hero #share .facebook .button iframe {
+  padding: 10px;
+  background: #4c66a4;
+}
+#hero #share .twitter {
+  background: #00aced;
+}
+#hero #share .twitter .button iframe {
+  padding: 10px;
+  background: #00aced;
+}
+#passes {
+  width: 960px;
+  margin: 0 auto 100px;
+}
+#passes #tickets_ga,
+#passes #tickets_vip {
+  margin-bottom: 60px;
+}
+#passes #tickets_ga h3,
+#passes #tickets_vip h3,
+#passes #tickets_ga h4,
+#passes #tickets_vip h4 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#passes #tickets_ga h4,
+#passes #tickets_vip h4 {
+  margin-bottom: 45px;
+}
+#passes #tickets_ga .ticket,
+#passes #tickets_vip .ticket {
+  float: left;
+  width: 260px;
+  margin-right: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+#passes #tickets_ga .ticket h2,
+#passes #tickets_vip .ticket h2 {
+  font-family: 'bebas_neuelight';
+  text-align: center;
+  font-size: 36px;
+}
+#passes #tickets_ga .ticket .price,
+#passes #tickets_vip .ticket .price {
+  font-family: 'bebas_neue_regular';
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+#passes #tickets_ga .ticket small,
+#passes #tickets_vip .ticket small {
+  text-align: center;
+  display: block;
+}
+#passes #tickets_ga .ticket:before,
+#passes #tickets_vip .ticket:before {
+  content: '';
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: black;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -40px;
+}
+#passes #tickets_ga .ticket:nth-child(90),
+#passes #tickets_vip .ticket:nth-child(90) {
+  background: #f22688;
+}
+#passes #tickets_ga .ticket:last-child,
+#passes #tickets_vip .ticket:last-child {
+  margin: 0;
+}
+#passes .fineprint {
+  color: white;
+  text-align: center;
+}
+#passes .fineprint a {
+  color: #f22688;
+  text-decoration: none;
+}
+#passes .fineprint small {
+  font-size: 10px;
+}
+#festival {
+  height: 525px;
+  background: url(http://dctobc.com/trillectro/img/festivalbg.jpg) center center fixed no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#festival .content {
+  width: 960px;
+  margin: 0 auto;
+  padding: 100px 0 0;
+}
+#festival p {
+  font-family: 'bebas_neue_regular';
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
+#festival #lastyear {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'bebas_neuebook';
+}
+#directions {
+  background: #551332;
+  background: -moz-linear-gradient(top, #551332 0%, #771a47 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #551332), color-stop(100%, #771a47));
+  background: -webkit-linear-gradient(top, #551332 0%, #771a47 100%);
+  background: -o-linear-gradient(top, #551332 0%, #771a47 100%);
+  background: -ms-linear-gradient(top, #551332 0%, #771a47 100%);
+  background: linear-gradient(to bottom, #551332 0%, #771a47 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#551332', endColorstr='#771a47', GradientType=0);
+}
+#directions .content {
+  width: 960px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+#directions h2 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+#directions h2.secondary {
+  font-family: 'bebas_neuelight';
+  margin-bottom: 50px;
+}
+#directions #map {
+  margin-bottom: 20px;
+}
+#directions #directions_info {
+  margin-bottom: 80px;
+}
+#directions #directions_info div {
+  float: left;
+  width: 300px;
+  margin-right: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+#directions #directions_info div:last-child {
+  margin: 0;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
