@@ -152,6 +152,29 @@ a {
   .section#about .content {
     width: 65%;
     float: right; }
+  .section#studio .content {
+    border-bottom: none; }
+  .section#studio ul {
+    padding: 0;
+    list-style-type: none; }
+    .section#studio ul li {
+      list-style: none;
+      border-bottom: 4px #767676 solid;
+      margin-bottom: 50px; }
+      .section#studio ul li h3 {
+        font-family: "Archivo Black", Helvetica, Arial, Sans-Serif;
+        text-transform: uppercase;
+        letter-spacing: none;
+        margin: 0; }
+        .section#studio ul li h3 a {
+          border-bottom: none; }
+          .section#studio ul li h3 a:hover {
+            color: #28394C; }
+      .section#studio ul li .subtitle {
+        font-size: 12px;
+        font-style: italic;
+        color: #28394C;
+        margin: 0; }
   .section#work .content {
     width: 65%;
     margin: 0 auto;

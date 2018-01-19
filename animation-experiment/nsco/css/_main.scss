@@ -1,0 +1,99 @@
+@import "bourbon/bourbon";
+
+html, body {
+  margin: 0;
+}
+
+.background {
+  @include position(absolute, 0px 0px 0px 0px);
+}
+
+.gradient1 {
+  @include linear-gradient(to right, #DAE3E2, #85ADD4);
+  @include animation(fadeInOut 25s ease);
+  @include animation-fill-mode(forwards);
+  @include animation-iteration-count(infinite);
+}
+
+.gradient2 {
+  @include linear-gradient(to right, #1A2B49,#141928);
+  @include animation(fadeOutIn 25s ease);
+  @include animation-fill-mode(forwards);
+  @include animation-iteration-count(infinite);
+}
+
+@include keyframes(fadeInOut) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fadeOutIn) {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOut) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@include keyframes(up) {
+  0% {
+    top:54%;
+  }
+  100% {
+    top:50%;
+  }
+}
+
+.svg-wrapper {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -36px;
+  margin-left: -136px;
+}
+
+#logo-white {
+  fill: #fff;
+  opacity: 0;
+  @include animation(fadeIn 2s ease);
+  @include animation-delay(2s);
+  @include animation-fill-mode(forwards);
+}
+
+#logo {
+  stroke: rgba(255,255,255,0.5);
+  stroke-width: 1px;
+  @include animation(fadeOut 1s ease);
+  @include animation-delay(2.75s);
+  @include animation-fill-mode(forwards);
+}
