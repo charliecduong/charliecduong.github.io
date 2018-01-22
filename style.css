@@ -244,7 +244,7 @@ a {
     font-size: 5em; } }
 @media screen and (max-width: 767px) {
   #particles {
-    display: none; }
+    position: absolute; }
 
   #header p {
     margin: 1em 0; }
