@@ -225,7 +225,7 @@
 }
 @media screen and (max-width: $mobile-breakpoint) {
   #particles {
-    position: absolute;
+    display: none;
   }
   #header {
     p {
