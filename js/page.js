@@ -419,28 +419,28 @@ $(function(){
 	sr.reveal('#header');
   sr.reveal('#intro', {
 		origin: 'bottom',
-		distance: '500px',
-		duration: 2000,
+		//distance: '500px',
+		duration: 1000,
 	}, 50);
 	sr.reveal('#about', {
 		origin: 'bottom',
-		distance: '500px',
-		duration: 2000,
+		//distance: '500px',
+		duration: 1000,
 	}, 50);
 	sr.reveal('.works', {
 		origin: 'bottom',
-		distance: '500px',
-		duration: 2000,
+		//distance: '500px',
+		duration: 1000,
 	}, 50);
 	sr.reveal('#contact', {
 		origin: 'bottom',
-		distance: '500px',
-		duration: 2000,
+		//distance: '500px',
+		duration: 1000,
 	}, 50);
 	sr.reveal('.content', {
 		origin: 'bottom',
-		distance: '500px',
-		duration: 2000,
+		//distance: '500px',
+		duration: 1000,
 	}, 50);
 });
 
