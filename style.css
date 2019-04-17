@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 h2,
 h3 {
-  font-family: "Archivo Black", Helvetica, Arial, Sans-Serif;
+  font-family: "Oswald", Helvetica, Arial, Sans-Serif;
   line-height: 1.25;
   letter-spacing: 3px;
   font-weight: normal; }
@@ -162,7 +162,7 @@ a {
       border-bottom: 4px #767676 solid;
       margin-bottom: 50px; }
       .section#studio ul li h3 {
-        font-family: "Archivo Black", Helvetica, Arial, Sans-Serif;
+        font-family: "Oswald", Helvetica, Arial, Sans-Serif;
         text-transform: uppercase;
         letter-spacing: none;
         margin: 0; }
@@ -187,7 +187,7 @@ a {
       border-bottom: 4px #767676 solid;
       margin-bottom: 50px; }
       .section#work ul li h3 {
-        font-family: "Archivo Black", Helvetica, Arial, Sans-Serif;
+        font-family: "Oswald", Helvetica, Arial, Sans-Serif;
         text-transform: uppercase;
         letter-spacing: none;
         margin: 0; }
