@@ -269,7 +269,7 @@ $(function(){
 	    mouse_ball.y = e.pageY;
 	    // console.log(mouse_ball);
 	});
-});
+}); 
 
 // Wrap each letter in a span
 // $("h1").html(function(index, html) {
